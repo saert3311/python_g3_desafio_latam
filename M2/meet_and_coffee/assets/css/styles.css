@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+/* Reset y clases base */
+
+:root {
+  --negro: #000f08;
+  --blanco: #ffffff;
+  --blanco2: rgba(179, 107, 1, 0.01);
+  --crema: rgba(179, 107, 1, 0.14);
+  --gris1: rgba(112, 112, 112, 1);
+  --crema2: rgba(179, 107, 1, 0.1);
+  --gris2: rgba(0, 0, 0, 0.5);
+  --blanco3: rgba(179, 107, 1, 0.03);
+  --ladrillo: rgba(164, 69, 44, 1);
+}
+
+* {
+  min-width: 0;
+  font: inherit;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+video,
+svg {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+img {
+  border-radius: 10px;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  font-family: "Open Sans", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  font-weight: 700;
+  margin: 0;
+}
+
+p {
+  text-wrap: pretty;
+  font-weight: 400;
+  /* Experimentando con clamp() https://utopigstudio.com/es/blog/diseno/tipografia-fluida-css-clamp */
+  font-size: clamp(1rem, 1vw + 0.3rem, 2rem);
+}
+
+main {
+  margin-top: 84px;
+}
+
+.distance {
+  margin: 5rem 0;
+}
+
+/* Utilidades */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.flex-center {
+  justify-content: center;
+  display: flex;
+}
+
+.centered {
+  text-align: center;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+/* Clases del menu */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--negro);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  color: var(--blanco);
+}
+
+nav {
+  padding: 20px 0;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+nav .logo {
+  width: 44px;
+  height: 44px;
+  filter: invert(100%);
+}
+
+nav .nav-item {
+  margin: 0 30px;
+  font-size: 18px;
+}
+
+a.nav-item {
+  text-decoration: none;
+  color: var(--blanco);
+}
+
+/* hero */
+
+section.hero {
+  min-height: 300px;
+  background: #ffffff url("../img/bg-hero.png") no-repeat center center;
+}
+
+section.hero .container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 300px;
+}
+
+section.hero h1 {
+  font-size: clamp(1rem, 5vw + 0.3rem, 2.5rem);
+  color: var(--blanco);
+  text-shadow: 0px 3px 6px #00000080;
+  text-align: end;
+}
+section.hero p {
+  font-size: clamp(1rem, 3vw + 0.3rem, 2rem);
+  color: var(--blanco);
+  text-shadow: 0px 3px 6px #00000080;
+  text-align: end;
+  margin: 1rem;
+}
+
+section.location h2 {
+    font-size: clamp(1rem, 2vw + 0.3rem, 2.5rem);
+    color: var(--negro);
+  }
