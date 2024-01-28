@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+/* Reset y clases base */
+
+:root {
+  --blanco: #ffffff;
+  --rosa: #E83E8C;
+  --gris: #DDDDDD;
+  --negro1: #373A3C;
+  --gris2: #707070;
+  --azul: #17A2B8;
+  --azul2: #1C7CD5;
+  --negro2: #001D1D;
+}
+
+* {
+  font: inherit;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  color: var(--negro1);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  font-weight: 700;
+}
+
+a {
+  color: var(--azul);
+  text-decoration: none;
+}
+
+p {
+  text-wrap: pretty;
+  font-weight: 400;
+}
+
+header, footer {
+    background-color: var(--rosa);
+}
+
+header .main-logo {
+    max-height: 53px;}
+
+.color-gris2 {
+    color: var(--gris2);
+}
+
+.bg-azul {
+    background-color: var(--azul);
+}
+
+.fs-60 {
+    font-size: clamp(1rem, 60px, 3.75rem);
+}
+.fs-40 {
+    font-size: clamp(1rem, 40px, 2.9rem);
+}
+
+.product-card {
+    max-height: 220px;
+    object-fit: cover;
+    width: auto;
+}
+
+.bottom-logo {
+    max-height: 140px;
+    width: auto;
+}
