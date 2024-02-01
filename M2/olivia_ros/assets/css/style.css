@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+/* Reset y clases base */
+
+:root {
+  --blanco: #ffffff;
+  --negro1: #373A3C;
+  --azu1: #17A2B8;
+  --gris1: #DDDDDD;
+  --negro_absoluto: #000000;
+  --negro2: #0F0F0F;
+  --gris2: rgba(162, 202, 193, 0.16);
+  --azul2: #56C0E0;
+  --gris_oscuro: #818A91;
+}
+
+* {
+  font: inherit;
+}
+body {
+  font-family: "Raleway", sans-serif;
+  color: var(--negro_absoluto);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  font-weight: 700;
+}
+
+a {
+  color: var(--azul);
+  text-decoration: none;
+}
+
+p {
+  text-wrap: pretty;
+  font-weight: 400;
+}
+
+header {
+    background-color: var(--negro1);
+}
+
+header .main-logo {
+    max-height: 53px;}
+
+#hero {
+    min-height: 90vh;
+    background-image: url(../img/bg-hero.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 30% center;
+    background-size: cover;
+}
+
+.btn-primary {
+    background-color: var(--azu1);
+    border-color: var(--azu1);
+}
+
+.btn-primary:hover, .btn-outline-primary:hover{
+    background-color: var(--azul2);
+    border-color: var(--azu1);
+}
+
+.btn-outline-primary {
+    border-color: var(--azul2);
+    color: var(--azul2);
+}
+
+.title {
+    font-size: clamp(2rem, 4rem, 42px);
+}
+
+#acerca i {
+    font-size: 3em;
+}
+@media (min-width: 576px) { 
+    .title {
+        font-size: clamp(2rem, 5rem, 70px);
+    }
+    #hero {
+        background-position: center;
+    }
+    #acerca i {
+        font-size: 5em;
+    }
+}
+
+.bg-azul1 {
+    background-color: var(--azu1);
+}
+.product-card {
+    max-height: 220px;
+    object-fit: cover;
+    width: auto;
+}
+
+.bg-negro2 {
+    background-color: var(--negro2);
+}
