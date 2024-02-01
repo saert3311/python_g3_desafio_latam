@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+/* Reset y clases base */
+
+:root {
+  --blanco: #ffffff;
+  --gris1: #DDDDDD;
+  --verde: #28A745;
+  --blanco2: rgba(255, 255, 255, 0.5);
+  --negro: #000000;
+  --negro2: #212529;
+  --gris_oscuro: #707070;
+  --gris_oscuro2: rgba(112, 112, 112, 0.63);
+  --blanco3: #F8F9FA;
+}
+
+* {
+  font: inherit;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--negro_absoluto);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  font-weight: 500;
+}
+
+a {
+  color: var(--azul);
+  text-decoration: none;
+}
+
+p {
+  text-wrap: pretty;
+  font-weight: 300;
+}
+
+header {
+    background-color: var(--verde);
+}
+
+header .main-logo {
+    max-height: 32px;}
+
+
+.btn-primary {
+    background-color: var(--azu1);
+    border-color: var(--azu1);
+}
+
+.btn-primary:hover, .btn-outline-primary:hover{
+    background-color: var(--azul2);
+    border-color: var(--azu1);
+}
+
+.btn-outline-primary {
+    border-color: var(--azul2);
+    color: var(--azul2);
+}
+
+.title {
+    font-size: clamp(2rem, 4rem, 42px);
+}
+
+#acerca i {
+    font-size: 3em;
+}
+@media (min-width: 576px) { 
+    .title {
+        font-size: clamp(2rem, 5rem, 70px);
+    }
+    #hero {
+        background-position: center;
+    }
+    #acerca i {
+        font-size: 5em;
+    }
+}
+
+.bg-azul1 {
+    background-color: var(--azu1);
+}
+.product-card {
+    max-height: 220px;
+    object-fit: cover;
+    width: auto;
+}
+
+.bg-negro2 {
+    background-color: var(--negro2);
+}
