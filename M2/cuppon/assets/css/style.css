@@ -16,9 +16,13 @@
 * {
   font: inherit;
 }
-body {
+body{
   font-family: "Roboto", sans-serif;
   color: var(--negro_absoluto);
+}
+::placeholder {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
 }
 h1,
 h2,
@@ -28,6 +32,10 @@ h5,
 h6 {
   text-wrap: balance;
   font-weight: 500;
+}
+
+h3 {
+    font-size: 1.7rem;
 }
 
 a {
@@ -40,11 +48,11 @@ p {
   font-weight: 300;
 }
 
-header {
+.bg-verde {
     background-color: var(--verde);
 }
 
-header .main-logo {
+.main-logo {
     max-height: 32px;}
 
 
@@ -85,12 +93,26 @@ header .main-logo {
 .bg-azul1 {
     background-color: var(--azu1);
 }
+
+.color-verde {
+    color: var(--verde)!important;
+}
 .product-card {
     max-height: 220px;
     object-fit: cover;
     width: auto;
 }
 
+
+.fw-500 {
+    font-weight: 500;
+}
 .bg-negro2 {
     background-color: var(--negro2);
+}
+
+#articles .card-title, #articles span {
+    font-family: "Roboto", sans-serif;
+    color: var(--negro2);
+    font-weight: 300;
 }
