@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Lobster&display=swap');
+
+:root {
+  --blanco: #ffffff;
+  --negro_absoluto: #000000;
+  --negro1: #373A3C;
+  --gris1: #DDDDDD;
+  --gris2: rgba(55, 58, 60, 0.19);
+  --rojo: #DC3545;
+}
+
+.use_lobster{
+    font-family: 'Lobster', sans-serif;
+}
+
+.bg-negro1 {
+    background-color: var(--negro1);
+}
+
+body {
+    font-family: 'Cabin', sans-serif;
+    color: var(--negro1);
+    font-size: 20px;
+}
+
+.splide__pagination {
+bottom: -1.5em;
+}
+
+.splide__pagination__page.is-active {
+    background: var(--negro1);
+}
+p {
+    text-wrap: pretty;
+}
+#cta {
+    background-color: var(--rojo);
+}
+
+footer {
+    background-color: var(--negro1);
+}

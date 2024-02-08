@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="Your website description" />
+    <meta name="keywords" content="your, website, keywords" />
+    <meta name="author" content="Jose Duarte" />
+    <title>Calculo de Notas</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>Notas Finales</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col"><p>
+                    <strong>Nombre:</strong> Juan Perez<br>
+                    <strong>Carrera:</strong> Desarrollo Web
+                    <button type="button" class="btn btn-primary" id="button">Agregar Notas</button>
+                </p></div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Ramo</th>
+                                <th>Nota 1</th>
+                                <th>Nota 2</th>
+                                <th>Nota 3</th>
+                                <th>Promedio</th>
+                            </tr>
+                        </thead>
+                        <tbody id="datos">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+  </body>
+  <script>
+    let button = document.getElementById('button');
+    let table_data = document.getElementById('datos');
+    let notas_object = {}
+    button.addEventListener('click', function(){
+        let ramo = prompt('Ingrese el ramo');
+        let nota1 = prompt(`Ingrese la nota 1 del ramo ${ramo}`);
+        let nota2 = prompt(`Ingrese la nota 2 del ramo ${ramo}`);
+        let nota3 = prompt(`Ingrese la nota 3 del ramo ${ramo}`);
+        let promedio = ((parseFloat(nota1) + parseFloat(nota2) + parseFloat(nota3)) / 3).toFixed(2);
+        let data = {
+            ramo: ramo,
+            nota1: nota1,
+            nota2: nota2,
+            nota3: nota3,
+            promedio: promedio
+        }
+        if(notas_object[ramo] == undefined){
+            notas_object[ramo] = data;
+            add_row(data);
+        }else{
+            alert('El ramo ya existe');
+        }
+    });
+    // Pensaba rehacer la tabla cada vez que se agregara un nuevo ramo, pero no es necesario solo agregamos una nueva fila y ya
+    function clear_table(){
+        table_data.innerHTML = '';
+    }
+    function add_row(data){
+        let row = document.createElement('tr');
+        let cell = document.createElement('td');
+        cell.innerHTML = data.ramo;
+        row.appendChild(cell);
+        cell = document.createElement('td');
+        cell.innerHTML = data.nota1;
+        row.appendChild(cell);
+        cell = document.createElement('td');
+        cell.innerHTML = data.nota2;
+        row.appendChild(cell);
+        cell = document.createElement('td');
+        cell.innerHTML = data.nota3;
+        row.appendChild(cell);
+        cell = document.createElement('td');
+        cell.innerHTML = data.promedio;
+        row.appendChild(cell);
+        table_data.appendChild(row);
+    }
+
+  </script>
+</html>
