@@ -91,7 +91,9 @@
                   PIZZA AL ESTILO CHICAGO CON ESPINACAS Y CHAMPIÑONES
                 </h2>
                 <hr class="border border-1 opacity-100 border-black" />
-                <p class="fs-5 fw-bold text-center text-sm-start">110 MIN / 6 A 8 PORCIONES</p>
+                <p class="fs-5 fw-bold text-center text-sm-start">
+                  110 MIN / 6 A 8 PORCIONES
+                </p>
                 <div class="d-flex justify-content-evenly d-sm-block mt-3">
                   <button class="btn btn-outline-dark" type="button">
                     Enviar por correo
@@ -176,7 +178,7 @@
         <div class="container">
           <div class="row">
             <div class="col-12 col-md-6">
-              <h3 class="text-decoration-underline link-offset-3 mb-4">
+              <h3 class="text-decoration-underline link-offset-3 mb-4 change_color">
                 INGREDIENTES
               </h3>
               <p>MASA</p>
@@ -201,7 +203,7 @@
               </ul>
             </div>
             <div class="col-12 col-md-6 mt-4 mt-sm-0">
-              <h3 class="text-decoration-underline link-offset-3 mb-4">
+              <h3 class="text-decoration-underline link-offset-3 mb-4 change_color">
                 PREPARACIÓN
               </h3>
               <p>
@@ -325,7 +327,13 @@
               y obten las mejores recetas que tenemos en
               <span class="use_lobster fs-3">Ricomida</span>
             </p>
-            <button type="button" class="btn btn-outline-light col-12 col-md-3">
+            <button
+              type="button"
+              id="enviarCorreo"
+              class="btn btn-outline-light col-12 col-md-3"
+              data-bs-toggle="tooltip"
+              data-bs-title="Enviar por Correo"
+            >
               Empezar
             </button>
           </div>
@@ -342,20 +350,12 @@
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <script>
-      new Splide(".splide", {
-        type: "loop",
-        gap: "1rem",
-        perPage: 4,
-        breakpoints: {
-          576: {
-            destroy: true,
-          },
-          768: {
-            perPage: 3,
-          }
-        },
-      }).mount();
-    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
   </body>
 </html>

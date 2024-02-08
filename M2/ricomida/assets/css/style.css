@@ -17,6 +17,10 @@
     background-color: var(--negro1);
 }
 
+.use_red{
+    color: var(--rojo)!important
+}
+
 body {
     font-family: 'Cabin', sans-serif;
     color: var(--negro1);
