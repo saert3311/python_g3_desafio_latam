@@ -55,7 +55,7 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
-    <header class="fixed-top mt-2">
+    <header class="fixed-top pt-2">
       <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
         <div class="container">
           <a class="navbar-brand" href="#">
@@ -85,7 +85,7 @@
                   >Inicio</a
                 >
               </li>
-              <li class="nav-item">
+              <li class="nav-item d-none d-md-block">
                 <a class="nav-link text-white" href="#quienes-somos">Quienes Somos</a>
               </li>
               <li class="nav-item">
@@ -123,7 +123,7 @@
             </button>
           </div>
       </section>
-      <section class="bg-dark pt-5" id="quienes-somos">
+      <section class="bg-dark pt-5 d-none d-md-block" id="quienes-somos">
         <div class="container">
            <div class="row">
             <div class="col">
@@ -135,9 +135,9 @@
               <span class="bg-info d-flex justify-content-center icon-bar align-items-center"><i class="fa-solid fa-plane fa-lg"></i></span>
               <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis totam voluptatem nemo perferendis impedit ratione atque aperiam laudantium ipsum cum exercitationem rem placeat, dolores reiciendis delectus iste neque cumque veniam expedita magni. Officiis assumenda repellendus quis rem rerum, fuga repellat id neque ad beatae saepe voluptatibus molestiae hic tempora minus architecto dolorum, tenetur natus dolor, amet voluptatum velit. Explicabo velit maiores expedita vero quos voluptas non commodi magnam provident mollitia.</p>
             </div>
-            <div class="col-12 col-md-4">
-              <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis totam voluptatem nemo perferendis impedit ratione atque aperiam laudantium ipsum cum exercitationem rem placeat, dolores reiciendis delectus iste neque cumque veniam expedita magni. Officiis assumenda repellendus quis rem rerum, fuga repellat id neque ad beatae saepe voluptatibus molestiae hic tempora minus architecto dolorum, tenetur natus dolor, amet voluptatum velit. Explicabo velit maiores expedita vero quos voluptas non commodi magnam provident mollitia.</p>
+            <div class="col-12 col-md-4 d-flex flex-column flex-md-column-reverse">
               <span class="bg-info d-flex justify-content-center icon-bar align-items-center mt-3"><i class="fa-solid fa-mountain fa-lg"></i></span>
+              <p class="mt-3 mt-sm-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis totam voluptatem nemo perferendis impedit ratione atque aperiam laudantium ipsum cum exercitationem rem placeat, dolores reiciendis delectus iste neque cumque veniam expedita magni. Officiis assumenda repellendus quis rem rerum, fuga repellat id neque ad beatae saepe voluptatibus molestiae hic tempora minus architecto dolorum, tenetur natus dolor, amet voluptatum velit. Explicabo velit maiores expedita vero quos voluptas non commodi magnam provident mollitia.</p>
             </div>
             <div class="col-12 col-md-4">
               <span class="bg-info d-flex justify-content-center icon-bar align-items-center"><i class="fa-solid fa-map-location-dot fa-lg"></i></span>
@@ -154,7 +154,7 @@
             </div>
            </div> 
            <div class="row mt-4">
-            <div class="col-12 col-md-3">
+            <div class="col-12 col-sm-6 col-md-3">
               <div class="card">
                 <img src="assets/img/card1.jpg" class="card-img-top" alt="Destacado 1">
                 <div class="card-body bg-info text-white">
@@ -163,7 +163,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-3">
+            <div class="col-12 col-sm-6 col-md-3 mt-2 mt-md-0">
               <div class="card">
                 <img src="assets/img/card2.jpg" class="card-img-top" alt="Destacado 2">
                 <div class="card-body bg-info text-white">
@@ -172,7 +172,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-3">
+            <div class="col-12 col-sm-6 col-md-3 mt-2 mt-md-0">
               <div class="card">
                 <img src="assets/img/card3.jpg" class="card-img-top" alt="Destacado 3">
                 <div class="card-body bg-info text-white">
@@ -181,7 +181,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-3">
+            <div class="col-12 col-sm-6 col-md-3 mt-2 mt-md-0">
               <div class="card">
                 <img src="assets/img/card4.jpg" class="card-img-top" alt="Destacado 4">
                 <div class="card-body bg-info text-white">
@@ -193,7 +193,7 @@
            </div>
         </div>
       </section>
-      <section class="bg-dark pt-5">
+      <section class="bg-dark py-5" id="contacto">
         <div class="container">
           <div class="row">
             <div class="col">
@@ -215,15 +215,27 @@
                     <textarea class="form-control" id="fromMessage" rows="3" placeholder="Escribe aquí tu mensaje"></textarea>
                   </div>
                   <div class="d-flex mt-4">
-                    <button class="btn btn-info" type="button">Enviar</button>
+                    <button class=  "btn btn-info" type="button">Enviar</button>
                 </div>
             </form>
         </div>
         </div>
       </section>
     </main>
-    <footer>
-
+    <footer class="bg-info text-white">
+      <div class="container">
+        <div class="row py-3">
+          <div class="col-12 col-sm-6">
+            <p class="text-center mb-0">VIAJES CHILE</p>
+          </div>
+          <div class="col-12 col-sm-6 d-flex justify-content-center align-items-center mt-2 mt-sm-0">
+            <i class="fa-brands fa-square-github mx-1 fa-lg"></i>
+            <i class="fa-brands fa-linkedin mx-1 fa-lg"></i>
+            <i class="fa-brands fa-square-twitter mx-1 fa-lg"></i>
+            <i class="fa-brands fa-square-facebook mx-1 fa-lg"></i>
+          </div>
+        </div>
+      </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script
