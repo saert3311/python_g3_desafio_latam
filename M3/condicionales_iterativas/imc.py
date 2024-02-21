@@ -1,3 +1,12 @@
+'''
+Se solicita crear el programa imc.py que permita calcular el IMC de una persona.
+1. Al programa se debe ingresar el peso en Kg y la talla (altura) en centímetros.
+2. Calcular el IMC ajustando los valores de entrada a las unidades requeridas por la
+fórmula. El resultado se debe informar con 2 decimales.
+3. Entregar al usuario una salida acorde que permita conocer el valor de su IMC
+además de la clasificación dada por la OMS.
+'''
+
 import sys
 
 if len(sys.argv) != 3:
