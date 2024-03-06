@@ -29,10 +29,11 @@ def calcular(**kwargs):
     '''
     Controla los calculos
     '''
+    #tal vez 
     for key, value in kwargs.items():
-        if key.startswith('fact'):
+        if 'fact' in key:
             print(f'El factorial de {value} es {factorial(value)}')
-        elif key.startswith('prod'):
+        elif 'prod' in key:
             print(f'La productoria de {value} es {productoria(value)}')
 
 
