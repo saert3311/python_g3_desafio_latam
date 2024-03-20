@@ -37,6 +37,16 @@ class Tienda:
     @property
     def tipo(self):
         return self._tipo
+
+    @property
+    def config(self):
+        return {
+            'costo_delivery': self.__costo_delivery,
+            'manejar_stock': self.__manejar_stock,
+            'reportar_stock': self.__reportar_stock,
+            'envio_gratis': self.__envio_gratis,
+            'poco_stock': self.__poco_stock
+        }
     
     def listar_productos(self):
         print(f"Productos de {self.__nombre}:")

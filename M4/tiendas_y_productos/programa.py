@@ -105,5 +105,42 @@ def operar_tienda():
         case _:
             print("Opción inválida")
 
+def venta_producto(tienda, producto=None, cantidad=None):
+    """Venta de producto
+    """
+    producto_vender = input('Que producto deseas vender:') if producto is None else producto
+    producto_cant = int(input('Que cantidad deseas vender:')) if producto is None else producto
+    resultado, restante = tienda.venta(producto_vender, producto_cant)
+    match (resultado, restante):
+        case (resultado, restante) if resultado == True and restante >= 0:
+            return print(f'Producto vendido!')
+        case (resultado, restante) if resultado == False and restante > 0:
+            reintentar = input(f'Solo restan {restante} en stock, deseas comprarlos (s/n)?')
+            if reintentar.lower() == 's':
+                if venta_producto(tienda, producto_vender, restante):
+                    return print(f'Producto vendido!')
+                else:
+                    return print(f'Producto no vendido, revise nuevamente')
+            else:
+                return print(f'Producto no vendido')
+        case (resultado, restante) if resultado == False and restante == 0:
+            return print(f'Producto no vendido, no hay stock')
+
+def agregar_stock(tienda):
+    """Agregar stock a un producto
+    """
+    if tienda.config['manejar_stock'] == False:
+        print('La tienda no maneja stock')
+        return
+    producto_agregar = input('Que producto deseas agregar stock:')
+    producto_cant = int(input('Que cantidad deseas agregar:'))
+    resultado = tienda.agregar_stock(producto_agregar, producto_cant)
+    if resultado:
+        print(f"Stock de {producto_agregar} aumentado en {producto_cant}")
+    else:
+        print(f"Ocurrio un error al aumentar el stock de {producto_agregar}")
+
+
+
 if __name__ == "__main__":
     main()
