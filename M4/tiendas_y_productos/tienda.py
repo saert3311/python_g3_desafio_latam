@@ -4,6 +4,7 @@ class Tienda:
     """    
     def __init__(self, nombre, tipo, costo_delivery=0, manejar_stock=True, reportar_stock=True, envio_gratis=0, poco_stock=0):
         self.__nombre = nombre
+        self._tipo = tipo
         self.__costo_delivery = costo_delivery
         self.__productos = []
         self.__manejar_stock = manejar_stock
