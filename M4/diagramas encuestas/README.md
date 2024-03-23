@@ -8,6 +8,7 @@ classDiagram
     modificarCorreo(): void
     modificarEdad(): void 
     modificarRegion(): void 
+    contestarEncuesta(encuesta: Encuesta): void
   }
   
   class Encuesta {
@@ -15,24 +16,37 @@ classDiagram
     private preguntas: Pregunta[]
     private listadosRespuestas: ListadoRespuestas[]  
     
-    mostrarEncuesta(): void
-    agregarListadoRespuestas(usuario: Usuario): void 
+    mostrar_encuesta(): void
+    agregar_respuestas(respuestas: Respuestas): void 
+  }
+
+    class EncuestaPorEdad {
+    + edad_minima: int
+    + edad_maxima: int
+
+    agregar_respuestas(respuestas: Respuestas): void 
+  }
+
+  class EncuestaPorRegion {
+
+    agregar_respuestas(respuestas: Respuestas): void 
   }
   
   class Pregunta {
     + enunciado: string 
     + ayuda: string (optional) 
     + requerida: boolean 
-    private alternativas: Alternativa[]  
+    - alternativas: Alternativa[]  
     
-    mostrarPregunta(): void
+    mostrar_pregunta()
+    agregar_alternativa()
   }
   
   class Alternativa {
     + contenido: string 
     + ayuda: string (optional) 
     
-    mostrarAlternativa(): void
+    « __str__(): String
   }
   
   class ListadoRespuestas {
@@ -40,14 +54,12 @@ classDiagram
     private respuestas: int[] 
   }
   
-  class Respuesta {
-    + valor: int // Public
-  }
   
   Usuario --> ListadoRespuestas
   Encuesta o-- Pregunta
+  Encuesta --> EncuestaPorEdad
+  Encuesta --> EncuestaPorRegion
   Encuesta o-- ListadoRespuestas
   Pregunta o-- Alternativa
   ListadoRespuestas --> Usuario
-  ListadoRespuestas o-- Respuesta
 ```
