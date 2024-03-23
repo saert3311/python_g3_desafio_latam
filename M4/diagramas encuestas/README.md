@@ -44,10 +44,10 @@ classDiagram
     + valor: int // Public
   }
   
-  Usuario <|---|> ListadoRespuestas
-  Encuesta <|---|> Pregunta
-  Encuesta <|---|> ListadoRespuestas
-  Pregunta <|---|> Alternativa
-  ListadoRespuestas <|---|> Usuario
-  ListadoRespuestas <|---|> Respuesta
+  Usuario --> ListadoRespuestas
+  Encuesta o-- Pregunta
+  Encuesta o-- ListadoRespuestas
+  Pregunta o-- Alternativa
+  ListadoRespuestas --> 1 Usuario
+  ListadoRespuestas o-- Respuesta
 ```
