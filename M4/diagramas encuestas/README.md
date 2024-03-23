@@ -1,53 +1,53 @@
 ```mermaid
 classDiagram
   class Usuario {
-    + correo: string // Public
-    private edad: int  // Private
-    private region: int // Private
+    + correo: string
+    private edad: int
+    private region: int
     
     modificarCorreo(): void
-    modificarEdad(): void // Access modifier may be needed based on implementation
-    modificarRegion(): void // Access modifier may be needed based on implementation
+    modificarEdad(): void 
+    modificarRegion(): void 
   }
   
   class Encuesta {
-    + nombre: string // Public
-    private preguntas: Pregunta[]  // Private (encapsulation)
-    private listadosRespuestas: ListadoRespuestas[]  // Private (encapsulation)
+    + nombre: string
+    private preguntas: Pregunta[]
+    private listadosRespuestas: ListadoRespuestas[]  
     
     mostrarEncuesta(): void
-    agregarListadoRespuestas(usuario: Usuario): void // Consider restrictions
+    agregarListadoRespuestas(usuario: Usuario): void 
   }
   
   class Pregunta {
-    + enunciado: string // Public
-    + ayuda: string (optional) // Public
-    + requerida: boolean // Public
-    private alternativas: Alternativa[]  // Private (encapsulation)
+    + enunciado: string 
+    + ayuda: string (optional) 
+    + requerida: boolean 
+    private alternativas: Alternativa[]  
     
     mostrarPregunta(): void
   }
   
   class Alternativa {
-    + contenido: string // Public
-    + ayuda: string (optional) // Public
+    + contenido: string 
+    + ayuda: string (optional) 
     
     mostrarAlternativa(): void
   }
   
   class ListadoRespuestas {
-    private usuario: Usuario  // Private (encapsulation)
-    private respuestas: int[]  // Private (encapsulation)
+    private usuario: Usuario  
+    private respuestas: int[] 
   }
   
   class Respuesta {
     + valor: int // Public
   }
   
-  Usuario <-> ListadoRespuestas
-  Encuesta <-> Pregunta
-  Encuesta <-> ListadoRespuestas
-  Pregunta <-> Alternativa
-  ListadoRespuestas <-> 1 Usuario
-  ListadoRespuestas <-> Respuesta
+  Usuario <|---|> ListadoRespuestas
+  Encuesta <|---|> Pregunta
+  Encuesta <|---|> ListadoRespuestas
+  Pregunta <|---|> Alternativa
+  ListadoRespuestas <|---|> Usuario
+  ListadoRespuestas <|---|> Respuesta
 ```
