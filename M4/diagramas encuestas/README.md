@@ -48,6 +48,6 @@ classDiagram
   Encuesta o-- Pregunta
   Encuesta o-- ListadoRespuestas
   Pregunta o-- Alternativa
-  ListadoRespuestas --> 1 Usuario
+  ListadoRespuestas --> Usuario
   ListadoRespuestas o-- Respuesta
 ```
