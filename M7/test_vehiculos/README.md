@@ -16,5 +16,5 @@ $ pip install -r requirements.txt
 
 # Ejecutamos los tests.
 
-$ python test_desafio2/manage.py test
+$ python test_vehiculos/manage.py test
 ```
